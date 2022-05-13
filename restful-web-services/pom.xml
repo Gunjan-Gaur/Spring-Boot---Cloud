@@ -31,6 +31,47 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
+		<!--GitHub link - https://github.com/in28minutes/spring-microservices-->
+		<!--HATEOAS - Hypermedia as the Engine of Application State -->
+		<!--Internationalization - i18n-->
+		<!--Content Negotation-->
+		<!--OpenApi Documnetation using swagger(http://localhost:8081/swagger-ui/index.html)-->
+		<!--Actuator - Used for production ready application to keep the track/health(http://localhost:8081/actuator)-->
+		<!--HAL Explorer - Just to see Actuator or other API's in better way (http://localhost:8081/)-->
+		<!--Versioning with different methods-->
+		<!--Spring Basic security-->
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-hal-explorer</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

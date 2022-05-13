@@ -1,4 +1,4 @@
-package com.learning.restfulwebservices.user;
+package com.in28minutes.rest.webservices.restfulwebservices.restfulwebservices.user;
 
 import java.net.URI;
 import java.util.List;
@@ -6,6 +6,10 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.EntityModel;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,11 +33,14 @@ public class UserResource {
 
 	// retrieve 1 user
 	@GetMapping(path = "/user/{id}")
-	public User retrieveSpecificUser(@PathVariable int id) {
+	public EntityModel<User> retrieveSpecificUser(@PathVariable int id) {
 		User user = userService.findOne(id);
 		if(user == null)
 			throw new UserNotFoundException("id-"+id);
-		return user;
+		EntityModel<User> model = EntityModel.of(user);
+		WebMvcLinkBuilder link = linkTo(methodOn(this.getClass()).retrieveUsers());
+		model.add(link.withRel("all-users"));
+		return model;
 	}
 
 	@PostMapping("/users")
@@ -45,8 +52,8 @@ public class UserResource {
 	
 	@DeleteMapping("/user/{id}")
 	public void deleteUser(@PathVariable int id) {
-		User user = userService.deleteById(id);
-		if(user == null) {
+		Boolean user = userService.deleteById(id);
+		if(!user) {
 			throw new UserNotFoundException("id-"+id);
 		}
 	}

@@ -1,4 +1,4 @@
-package com.learning.restfulwebservices.user;
+package com.in28minutes.rest.webservices.restfulwebservices.restfulwebservices.user;
 
 import java.util.Date;
 

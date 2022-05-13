@@ -1,9 +1,10 @@
-package com.learning.restfulwebservices.user;
+package com.in28minutes.rest.webservices.restfulwebservices.restfulwebservices.user;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -30,22 +31,11 @@ public class UserDoaService {
 	}
 	
 	public User findOne(int id) {
-		for (User user : users) {
-			if(user.getId() == id)
-				return user;
-		}
-		return null;
+		List<User> output = users.stream().filter(u -> u.getId() == id).collect(Collectors.toList());
+		return output.size() > 0 ? output.get(0) : null;
 	}
 	
-	public User deleteById(int id) {
-		Iterator<User> userList = users.iterator();
-		while(userList.hasNext()) {
-			User user = userList.next();
-			if(user.getId() == id) {
-				userList.remove();
-				return user;
-			}
-		}
-		return null;
+	public Boolean deleteById(int id) {
+		return users.removeIf(u -> u!=null && u.getId() == id);
 	}
 }
