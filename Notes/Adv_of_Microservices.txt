@@ -1,0 +1,54 @@
+elcome back in this video we would be discussing about some of the advantages of microServices.
+
+Architecture is the most important advantage of the MicroServices architecture is that it enables you
+
+to adapt new technology and processes very easy.
+
+When they build applications as a combination of microservices which can communicate with each other
+
+using simple messages each of these microservices can be built in different technologies.
+
+Typical more nolet applications people would not have that flexibility.
+
+For example Microservice one might be java MicroService two might be Nodejs Microservice three might be
+
+written in Kotlin and tomorrow there might be a language X Y Z which is really doing well and which
+
+provides a lot of benefits to you and you can easily create a micro service in that specific language.
+
+And also for the new Microservices that we create we can bring in new processors as well.
+
+The other important advantage of Microservices is Dynamic scaling consider an online shopping application
+
+like Amazon.
+
+They don't really have the same amount of load or same amount of traffic or same amount of users throughout
+
+the year especially during the holiday season.
+
+The load on the application will be a lot and during the rest of the year there might not be so much
+
+load during the Black Friday there might be a huge amount of load.
+
+If your microServices are cloud enabled they can scale dynamically and you can procure hardware and release
+
+that dynamically as well.
+
+So you can scale up your applications and scale them down based on the Loadd because you're developing
+
+smaller components.
+
+It's much easier to release micro services compared to monolith applications.
+
+This means that you can bring new features faster to market and that's a big advantage to have in the
+
+modern world.
+
+In this video we discuss about three of the most important advantages of Microservices
+
+its adoption of new technology and processes dynamic scaling and faster release cycles until the next video
+
+bye bye.
+
+Purée.
+

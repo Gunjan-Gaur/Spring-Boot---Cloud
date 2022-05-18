@@ -1,0 +1,137 @@
+
+
+Let's discuss about the different challenges with building your MicroServices
+
+We will start with the problem number one which is bounded context what do I mean.
+
+Earlier we said instead of.
+
+One.
+
+Big monolith application we'd be building about five small microservices or 10 or 20 or hundred.
+
+How do you identify the boundary for each of these microservices.
+
+How do you identify what to do in each of these microservices.
+
+How do you decide what you should do and what you should not do.
+
+Thing is for new applications this is especially much more difficult because probably you don't really
+
+have the business knowledge to be able to establish the right boundaries between these micorservices.
+
+What I found in my experience is deciding the boundaries of micorservices.
+
+This is an evolutionary process it's not something you would get it right the first time.
+
+It's something which you need to play around with.
+
+Try and follow different domain design try to identify the right boundaries for the microservices based
+
+on the knowledge you have at that point in time.
+
+The important thing to understand is as you keep gaining knowledge you should put that knowledge back
+
+into the microservices into deciding what is the right boundaries for these.
+
+microservices the next important challenge for microservices.
+
+is configuration management.
+
+We said we would have five or 50 microservices these microservices have multiple instances in
+
+each environment and there are multiple environments and we don't mind.
+
+So let's say there are 10 microservices with 5 environments and let's say 50 instances to be talking
+
+about basically tons of configuration and thats a lot of work for the operation team to maintain an important
+
+challenge is the dynamic scale up and scale down establishing the technology to be able to do that
+
+The loads on different microservices will be different at different instances of time and at particular instance
+
+I might need two instances of Microservice2.
+
+But later at a different point in time I might me needing 10 instances of this.
+
+So I should be able to bring the new instances of Microservice is up and bring down older instances of
+
+Microservice when they are not really needed.
+
+All this with dynamic load balancing because when there is one instance of Microservice1 and there
+
+are four instances of Microservice2 then I would want to distribute the load between all the instances
+
+of Microservice2.
+
+And if there are four instances of Microservice2 coming up then I would want to ensure that all the new ones
+
+are also being used to the fullest extent.
+
+So we need the ability to dynamically bring in new instances and also to distribute the load among the
+
+new instances the forth and one of the most important challenges is visibility.
+
+If I say the functionality is now distributed among 10 microservices and there is a bug How do you
+
+identify where the bug is.
+
+You need to have a centralized log where I can go and find out what happened for a specific request
+
+which MicroService caused the problem not just that we also need monitoring around these microservices
+
+because we have hundreds ofmicroservices we need to be able to identify the microservices which
+
+are down.
+
+We would want to be able to automatically identify those where there is not enough disk space.
+
+All these kind of things need to be automated.
+
+So we need great visibility into what's happening with these microservices.
+
+And last but not the least important of them is the fact that if it's not well-designed microservices
+
+architecture can be like backoff got what do I mean it's basically that in microservices architecture.
+
+You have one microservice is calling another another calling another.
+
+So there would be certain microservices which would be the fundamental for the whole thing.
+
+And if that microservice goes down then the entire application might go down.
+
+So it's like a pack of cards you're building one over the top of the other and so on and so on.
+
+And therefore they get collapse very easily and therefore it's very important for you to have fault
+
+tolerance in your microservices in this we looked at the 5 important challenges related
+
+to microservices.
+
+We started with bounded context identifying what is the right context for you or microservice is what
+
+is the right boundary for your.
+
+microservice we talked about the problem of configuration management hundreds of microservices and
+
+a lot of environments there is tons of configuration that you would want to manage.
+
+How do we simplify say that we would want to be able to dynamically scale up and scale down and dynamically
+
+distribute load among the active instances.
+
+How do we do that.
+
+We want to have great visibility into what's happening behind the scenes with each of these microservices
+
+a simple request might involve 10 microservices how do I determine which microservice was
+
+caused for a defect.
+
+How do I know if all my microservices are up and running.
+
+And how do I prevent one microservice being down taking down the entire application.
+
+How do I build fault tolerance into my microservices.
+
+And then the next step bye.
