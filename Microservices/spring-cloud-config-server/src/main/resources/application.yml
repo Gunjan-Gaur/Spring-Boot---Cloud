@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: "spring-cloud-config-server"
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/Gunjan-Gaur/git-config"
+server:
+  port: 8888
+
