@@ -3,6 +3,11 @@ spring:
       import: "optional:configserver:http://localhost:8888"
   application:
     name: "limits-service"
+  profile:
+    active: "dev"
+  cloud:
+    config:
+      profile: "dev"
 
 limits-service:
   min: 50
