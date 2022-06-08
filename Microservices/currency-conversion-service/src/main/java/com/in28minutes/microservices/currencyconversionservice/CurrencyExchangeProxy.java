@@ -4,7 +4,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "currency-exchange" , url = "localhost:8000")
+//@FeignClient(name = "currency-exchange" , url = "localhost:8000") Before Eureka Server
+@FeignClient(name = "currency-exchange") //After Eureka Server
 public interface CurrencyExchangeProxy {
     @GetMapping("currency-exchange/from/{from}/to/{to}")
     public CurrencyConversion retreiveCurrency(@PathVariable String from, @PathVariable String to);
